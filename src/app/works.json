@@ -1,0 +1,38 @@
+[
+  {
+    "no": 1,
+    "title": "Pura Scents",
+    "bgColor": "bg-[#02cc99]",
+    "image": "/works/1.png"
+  },
+  {
+    "no": 2,
+    "title": "Ripple",
+    "bgColor": "bg-[#fd304b]",
+    "image": "/works/1.png"
+  },
+  {
+    "no": 3,
+    "title": "Flip",
+    "bgColor": "bg-[#e0af4e]",
+    "image": "/works/1.png"
+  },
+  {
+    "no": 4,
+    "title": "Classdojo",
+    "bgColor": "bg-[#00adf2]",
+    "image": "/works/1.png"
+  },
+  {
+    "no": 5,
+    "title": "Propper",
+    "bgColor": "bg-[#29333a]",
+    "image": "/works/1.png"
+  },
+  {
+    "no": 6,
+    "title": "Caviar",
+    "bgColor": "bg-[#f97343]",
+    "image": "/works/1.png"
+  }
+]

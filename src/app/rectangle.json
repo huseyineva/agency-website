@@ -1,0 +1,30 @@
+[
+  {
+    "no": 1,
+    "title": "Raspberry",
+    "content": "#EF0D33",
+    "bgColor": "bg-[#ef0d33]",
+    "textColor": "text-white"
+  },
+  {
+    "no": 2,
+    "title": "Space Coal",
+    "content": "#111517",
+    "bgColor": "bg-[#1d2022]",
+    "textColor": "text-white"
+  },
+  {
+    "no": 3,
+    "title": "Deep Mist",
+    "content": "#888888",
+    "bgColor": "bg-[#888888]",
+    "textColor": "text-white"
+  },
+  {
+    "no": 4,
+    "title": "Penicilin",
+    "content": "#FFFFFF",
+    "bgColor": "bg-white",
+    "textColor": "text-black"
+  }
+]

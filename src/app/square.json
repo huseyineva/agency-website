@@ -1,0 +1,23 @@
+[
+  {
+    "no": 1,
+    "title": "STRV",
+    "bgColor": "bg-[#1d2022]",
+    "textColor": "text-[#ef0d33]",
+    "isLarge": true
+  },
+  {
+    "no": 2,
+    "title": "STRV",
+    "bgColor": "bg-[#ffffff]",
+    "textColor": "text-[#ef0d33]",
+    "isLarge": false
+  },
+  {
+    "no": 3,
+    "title": "STRV",
+    "bgColor": "bg-[#ef0d33]",
+    "textColor": "text-[#ffffff]",
+    "isLarge": false
+  }
+]
