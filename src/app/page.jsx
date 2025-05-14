@@ -20,7 +20,7 @@ export default function Home() {
     <div>
       {buildPage()}
       <Line sectionName="Brand Values" />
-      <div className="flex justify-between">
+      <div className="flex justify-between flex-col lg:flex-row gap-10 lg:gap-0">
         {data.map((e) => {
           return (
             <BrandValues
@@ -34,7 +34,7 @@ export default function Home() {
         })}
       </div>
       <Line sectionName="Logo Variatons" />
-      <div className="grid grid-flow-col grid-rows-2 justify-between">
+      <div className="lg:grid lg:grid-flow-col lg:grid-rows-2 gap-2">
         {squareData.map((e) => (
           <SquareBox
             key={e.no}
@@ -47,7 +47,7 @@ export default function Home() {
         ))}
       </div>
       <Line sectionName="Colors" />
-      <div className="grid grid-cols-4 gap-30">
+      <div className="lg:grid lg:grid-cols-4 lg:gap-6 flex flex-col">
         {rectangle.map((e) => (
           <Rectangle
             key={e.no}
@@ -61,26 +61,26 @@ export default function Home() {
         ))}
       </div>
       <Line sectionName="Photos" />
-      <div className="flex flex-col gap-20 relative">
-        <div className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-500 w-[40%] h-[40%] z-2 mix-blend-color-burn"></div>
-        <div className="flex gap-5 justify-between items-end">
+      <div className="flex flex-col lg:gap-20 gap-5 relative">
+        <div className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-500 w-[40%] h-[40%] z-2 mix-blend-color-burn hidden lg:flex"></div>
+        <div className="flex flex-col lg:flex-row gap-5 justify-between items-end">
           <Image
             src={office1}
             alt=""
-            className="object-cover grayscale w-[70%]"
+            className="object-cover grayscale lg:w-[70%] w-[100%]"
           />
           <Image
             src={office2}
             alt=""
-            className="object-cover grayscale w-[20%] h-[500px]"
+            className="object-cover grayscale lg:w-[20%] w-[100%] lg:h-[500px]"
           />
         </div>
-        <div className="flex gap-5 justify-between">
-          <div className="w-[40%] flex flex-col justify-between items-end">
+        <div className="flex flex-col lg:flex-row lg:gap-5 gap-5 justify-between">
+          <div className="w-[100%] lg:w-[40%] flex flex-col lg:gap-0 gap-5 justify-between items-end">
             <Image
               src={office3}
               alt=""
-              className="object-cover grayscale h-[400px]"
+              className="object-cover grayscale lg:h-[400px] max-h-[49vw]"
             />
             <span className="text-gray-400 max-w-2xs tracking-wide">
               Using black & white photos and supplementing them with "red
@@ -90,12 +90,12 @@ export default function Home() {
           <Image
             src={office4}
             alt=""
-            className="object-cover grayscale w-[50%]"
+            className="object-cover grayscale lg:w-[50%] w-[100%]"
           />
         </div>
       </div>
       <Line sectionName="Works" />
-      <div className="grid grid-cols-3 gap-10">
+      <div className="lg:grid lg:grid-cols-3 flex gap-10 overflow-x-scroll lg:overflow-x-visible">
         {works.map((e) => (
           <Works
             key={e.no}
@@ -111,29 +111,29 @@ export default function Home() {
 
 const buildPage = () => {
   return (
-    <div className="grid grid-cols-12 gap-5 h-[85vh]">
-      <div className="col-span-3 flex flex-col justify-between">
+    <div className="lg:grid lg:grid-cols-12 flex flex-col gap-5">
+      <div className="col-span-3 flex lg:flex-col justify-between items-center">
         <div>LOGO</div>
         <Link
           href="#"
-          className="vertical-text max-h-28 uppercase text-sm !text-[#666666]"
+          className="vertical-text max-h-28 uppercase text-[2vw] lg:text-[.75vw] !text-[#666666]"
         >
           Branding and website
         </Link>
         <Link
           href="#"
-          className="vertical-text max-h-28 uppercase text-sm !text-[#666666]"
+          className="vertical-text max-h-28 uppercase text-[2vw] lg:text-[.75vw] !text-[#666666]"
         >
           designed at strv
         </Link>
       </div>
-      <div className="col-span-9 flex flex-col justify-between pl-30">
-        <span className="text-9xl font-bold uppercase max-w-4xl">
-          Branding <span className="!text-[#666666] !bg-transparent">and</span>{" "}
+      <div className="col-span-9 flex flex-col justify-between lg:pl-30 lg:gap-10 gap-5">
+        <span className="lg:text-[5vw] text-[12vw] leading-[13vw] lg:leading-[6vw] font-bold uppercase max-w-4xl">
+          Branding <span className="!text-[#666666] !bg-transparent">and</span>
           website redesing
         </span>
-        <hr className="w-[80px]" />
-        <p className="max-w-3xl text-3xl leading-11 baskervville">
+        <hr className="lg:w-[5vw] w-[20vw]" />
+        <p className="lg:max-w-3xl lg:text-[1.5vw] lg:leading-[2.2vw] text-[5vw] baskervville text-justify">
           We are mobile app and web development compant with offices in Los
           Angeles, San Francisco, New York and Prague craeting apps for the top
           US startups and well established brands.

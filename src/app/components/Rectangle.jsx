@@ -5,14 +5,16 @@ function Rectangle({ title, content, bgColor, textColor, index }) {
   return (
     <div
       className={clsx(
-        "h-[420px] p-10 flex flex-col gap-2",
+        "lg:h-[25vw] p-10 flex flex-col gap-2 mt-3 lg:mt-0",
         bgColor,
         textColor,
-        index % 2 == 0 && "mt-10"
+        index % 2 == 0 && "lg:mt-10"
       )}
     >
-      <div className="font-bold uppercase text-xl">{title}</div>
-      <div className="font-light">{content}</div>
+      <div className="font-bold uppercase lg:text-[1.2vw] text-[5vw]">
+        {title}
+      </div>
+      <div className="font-light lg:text-[.8vw] text-[5vw]">{content}</div>
     </div>
   );
 }

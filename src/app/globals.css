@@ -19,3 +19,14 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+@media (max-width: 768px) {
+  .vertical-text {
+    writing-mode: unset;
+  }
+
+  body,
+  html {
+    overflow-x: hidden;
+  }
+}

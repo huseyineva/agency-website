@@ -4,9 +4,9 @@ function SquareBox({ title, bgColor, textColor, isLarge, index }) {
   return (
     <div
       className={clsx(
-        "flex items-center justify-center w-sm h-[385px] text-7xl font-bold",
-        isLarge && "h-full row-span-3 !w-6xl",
-        index === 3 && "row-span-2 mt-2",
+        "flex items-center justify-center p-20 lg:p-35 lg:text-[3vw] text-[8vw] font-bold w-full mt-5 lg:mt-0",
+        isLarge && "lg:row-span-3",
+        index === 3 && "lg:row-span-2 lg:mt-2",
         bgColor,
         textColor
       )}
