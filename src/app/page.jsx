@@ -13,6 +13,7 @@ import office3 from "./images/3.jpg";
 import office4 from "./images/4.jpg";
 import works from "./works.json";
 import Works from "./components/Works";
+import logo from "./images/logo.webp";
 
 export default function Home() {
   console.log(data);
@@ -20,7 +21,7 @@ export default function Home() {
     <div>
       {buildPage()}
       <Line sectionName="Brand Values" />
-      <div className="flex justify-between flex-col lg:flex-row gap-10 lg:gap-0">
+      <div className="flex justify-between gap-10 flex-col md:flex-row md:gap-0">
         {data.map((e) => {
           return (
             <BrandValues
@@ -34,7 +35,7 @@ export default function Home() {
         })}
       </div>
       <Line sectionName="Logo Variatons" />
-      <div className="lg:grid lg:grid-flow-col lg:grid-rows-2 gap-2">
+      <div className="gap-2 md:grid md:grid-rows-2 md:grid-flow-col ">
         {squareData.map((e) => (
           <SquareBox
             key={e.no}
@@ -47,7 +48,7 @@ export default function Home() {
         ))}
       </div>
       <Line sectionName="Colors" />
-      <div className="lg:grid lg:grid-cols-4 lg:gap-6 flex flex-col">
+      <div className="flex flex-col md:grid md:grid-cols-4 md:gap-6">
         {rectangle.map((e) => (
           <Rectangle
             key={e.no}
@@ -61,26 +62,26 @@ export default function Home() {
         ))}
       </div>
       <Line sectionName="Photos" />
-      <div className="flex flex-col lg:gap-20 gap-5 relative">
-        <div className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-500 w-[40%] h-[40%] z-2 mix-blend-color-burn hidden lg:flex"></div>
-        <div className="flex flex-col lg:flex-row gap-5 justify-between items-end">
+      <div className="flex flex-col gap-5 relative md:gap-20">
+        <div className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-500 w-[40%] h-[40%] z-2 mix-blend-color-burn hidden md:flex"></div>
+        <div className="flex flex-col gap-5 justify-between items-end md:flex-row">
           <Image
             src={office1}
             alt=""
-            className="object-cover grayscale lg:w-[70%] w-[100%]"
+            className="object-cover grayscale w-[100%] md:w-[70%]"
           />
           <Image
             src={office2}
             alt=""
-            className="object-cover grayscale lg:w-[20%] w-[100%] lg:h-[500px]"
+            className="object-cover grayscale w-[100%] md:w-[20%] md:h-[30vw]"
           />
         </div>
-        <div className="flex flex-col lg:flex-row lg:gap-5 gap-5 justify-between">
-          <div className="w-[100%] lg:w-[40%] flex flex-col lg:gap-0 gap-5 justify-between items-end">
+        <div className="flex flex-col gap-5 justify-between md:flex-row md:gap-5">
+          <div className="w-[100%] flex flex-col gap-5 justify-between items-end md:w-[40%] md:gap-10 md:gap-0">
             <Image
               src={office3}
               alt=""
-              className="object-cover grayscale lg:h-[400px] max-h-[49vw]"
+              className="object-cover grayscale max-h-[49vw] md:h-[400px]"
             />
             <span className="text-gray-400 max-w-2xs tracking-wide">
               Using black & white photos and supplementing them with "red
@@ -90,12 +91,12 @@ export default function Home() {
           <Image
             src={office4}
             alt=""
-            className="object-cover grayscale lg:w-[50%] w-[100%]"
+            className="object-cover grayscale w-[100%] md:w-[50%]"
           />
         </div>
       </div>
       <Line sectionName="Works" />
-      <div className="lg:grid lg:grid-cols-3 flex gap-10 overflow-x-scroll lg:overflow-x-visible">
+      <div className="flex gap-10 overflow-x-scroll md:grid md:grid-cols-3 md:overflow-x-visible">
         {works.map((e) => (
           <Works
             key={e.no}
@@ -111,29 +112,34 @@ export default function Home() {
 
 const buildPage = () => {
   return (
-    <div className="lg:grid lg:grid-cols-12 flex flex-col gap-5">
-      <div className="col-span-3 flex lg:flex-col justify-between items-center">
-        <div>LOGO</div>
+    <div className="flex flex-col gap-5 md:grid md:grid-cols-12">
+      <div className="col-span-3 flex justify-between items-center md:flex-col md:items-start">
+        <Image
+          src={logo}
+          alt="Cuk Reklam"
+          width={100}
+          className="w-[60px] lg:w-[80px] xl:w-[100px]"
+        />
         <Link
           href="#"
-          className="vertical-text max-h-28 uppercase text-[2vw] lg:text-[.75vw] !text-[#666666]"
+          className="vertical-text uppercase text-[2.2vw] text-white md:max-h-20 md:text-[1.2vw] md:text-[#666666] lg:max-h-30 xl:text-[.75vw]"
         >
           Branding and website
         </Link>
         <Link
           href="#"
-          className="vertical-text max-h-28 uppercase text-[2vw] lg:text-[.75vw] !text-[#666666]"
+          className="vertical-text uppercase text-[2.2vw] text-white md:max-h-20 md:text-[1.2vw] md:text-[#666666] lg:max-h-30 xl:text-[.75vw]"
         >
           designed at strv
         </Link>
       </div>
-      <div className="col-span-9 flex flex-col justify-between lg:pl-30 lg:gap-10 gap-5">
-        <span className="lg:text-[5vw] text-[12vw] leading-[13vw] lg:leading-[6vw] font-bold uppercase max-w-4xl">
+      <div className="col-span-9 flex flex-col justify-between gap-5 pt-10 md:pl-30 md:gap-10 md:pt-0">
+        <span className="text-[12vw] leading-[13vw] font-bold uppercase max-w-4xl md:leading-[6vw] md:text-[5vw]">
           Branding <span className="!text-[#666666] !bg-transparent">and</span>
           website redesing
         </span>
-        <hr className="lg:w-[5vw] w-[20vw]" />
-        <p className="lg:max-w-3xl lg:text-[1.5vw] lg:leading-[2.2vw] text-[5vw] baskervville text-justify">
+        <hr className="w-[20vw] md:w-[5vw]" />
+        <p className="text-[5vw] baskervville text-justify md:max-w-[45vw] md:text-[1.5vw] md:leading-[2.2vw]">
           We are mobile app and web development compant with offices in Los
           Angeles, San Francisco, New York and Prague craeting apps for the top
           US startups and well established brands.

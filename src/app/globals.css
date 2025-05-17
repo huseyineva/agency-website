@@ -20,7 +20,7 @@ body {
   font-style: normal;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .vertical-text {
     writing-mode: unset;
   }
